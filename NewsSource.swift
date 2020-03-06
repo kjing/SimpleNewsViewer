@@ -16,8 +16,9 @@ class NewsSource: ObservableObject {
 
 		// Here is my apiToken generated from https://newsapi.org/s/google-news-api
 		let apiToken = "81f18f7c2a7e4274b443f9ecaf8f7082"
-		let sourceUrl = "https://newsapi.org/v2/top-headlines?sources=google-news&apiKey==81f18f7c2a7e4274b443f9ecaf8f7082"
-        if let url = URL(string: "https://newsapi.org/v2/top-headlines?sources=google-news&apiKey==81f18f7c2a7e4274b443f9ecaf8f7082") {
+		let sourceUrl = "https://newsapi.org/v2/top-headlines?sources=google-news&apiKey=\(apiToken)"
+
+		if let url = URL(string: sourceUrl) {
             let session = URLSession(configuration: .default)
             let task = session.dataTask(with: url) { (data, response, error) in
 				// no error, so we fetch news data successfully
