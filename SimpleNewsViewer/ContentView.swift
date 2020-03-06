@@ -9,9 +9,13 @@
 import SwiftUI
 
 struct ContentView: View {
+
     var body: some View {
-        Text("Hello, World!")
-    }
+        NavigationView {
+				Text("will add later")
+			}
+            .navigationBarTitle("A News Viewer")
+	}
 }
 
 struct ContentView_Previews: PreviewProvider {
