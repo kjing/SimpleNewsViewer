@@ -20,7 +20,7 @@ class NewsSource: ObservableObject {
 
 		if let url = URL(string: sourceUrl) {
             let session = URLSession(configuration: .default)
-            let task = session.dataTask(with: url) { (data, response, error) in
+            let task = session.dataTask(with: url) { (data, _, error) in
 				// no error, so we fetch news data successfully
                 if error == nil {
 					// JSON decoder
