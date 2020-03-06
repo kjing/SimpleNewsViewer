@@ -12,12 +12,12 @@ class NewsSource: ObservableObject {
 
     @Published var posts = [Post]()
 
-	// Here is my apiToken generated from https://newsapi.org/s/google-news-api
-    let apiToken = "81f18f7c2a7e4274b443f9ecaf8f7082"
-    let sourceUrl = "https://newsapi.org/v2/top-headlines?sources=google-news&apiKey==(apiToken)"
-
     func fetchData() {
-        if let url = URL(string: sourceUrl) {
+
+		// Here is my apiToken generated from https://newsapi.org/s/google-news-api
+		let apiToken = "81f18f7c2a7e4274b443f9ecaf8f7082"
+		let sourceUrl = "https://newsapi.org/v2/top-headlines?sources=google-news&apiKey==81f18f7c2a7e4274b443f9ecaf8f7082"
+        if let url = URL(string: "https://newsapi.org/v2/top-headlines?sources=google-news&apiKey==81f18f7c2a7e4274b443f9ecaf8f7082") {
             let session = URLSession(configuration: .default)
             let task = session.dataTask(with: url) { (data, response, error) in
 				// no error, so we fetch news data successfully
@@ -29,7 +29,7 @@ class NewsSource: ObservableObject {
                             let results = try decoder.decode(Results.self, from: safeData)
                             DispatchQueue.main.async {
 								// return news articles
-                                self.posts = results.articles
+								self.posts = results.articles
                             }
                         } catch {
                             print(error)

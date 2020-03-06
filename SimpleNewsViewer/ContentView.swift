@@ -10,11 +10,28 @@ import SwiftUI
 
 struct ContentView: View {
 
-    var body: some View {
-        NavigationView {
-				Text("will add later")
-			}
-            .navigationBarTitle("A News Viewer")
+	// In ContentView to store an NewsSource instance
+	// to update view when they change.
+	@ObservedObject var newsSource = NewsSource()
+
+	var body: some View {
+		   // to use NavigationView
+		   NavigationView {
+			   List(newsSource.posts) { post in
+				   // to pass google new artichle's url to NewsView
+				   // and use webview to view it.
+				   NavigationLink(destination: NewsView(url: post.url)) {
+					   HStack {
+						   Text(String("articles :\n "))
+						   Text(post.title)
+					   }
+				   }
+			   }
+			   .navigationBarTitle("A News Viewer")
+		   }
+		   .onAppear {
+			   self.newsSource.fetchData()
+		   }
 	}
 }
 

@@ -9,7 +9,7 @@
 import Foundation
 import SwiftUI
 
-struct NewslView: View {
+struct NewsView: View {
 
     let url: String?
 
@@ -20,6 +20,6 @@ struct NewslView: View {
 
 struct NewsView_Previews: PreviewProvider {
     static var previews: some View {
-        NewslView(url: "https://www.google.com")
+        NewsView(url: "https://www.google.com")
     }
 }
