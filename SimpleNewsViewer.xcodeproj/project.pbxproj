@@ -15,6 +15,7 @@
 		B5F5ABAB2411FB1200052B91 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5F5ABA92411FB1200052B91 /* LaunchScreen.storyboard */; };
 		B5F5ABB62411FB1200052B91 /* SimpleNewsViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F5ABB52411FB1200052B91 /* SimpleNewsViewerTests.swift */; };
 		B5F5ABC12411FCFB00052B91 /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F5ABC02411FCFB00052B91 /* NewsView.swift */; };
+		B5F5ABC32411FFD700052B91 /* FetchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F5ABC22411FFD700052B91 /* FetchData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		B5F5ABB52411FB1200052B91 /* SimpleNewsViewerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleNewsViewerTests.swift; sourceTree = "<group>"; };
 		B5F5ABB72411FB1200052B91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5F5ABC02411FCFB00052B91 /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
+		B5F5ABC22411FFD700052B91 /* FetchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 		B5F5AB922411FB0F00052B91 = {
 			isa = PBXGroup;
 			children = (
+				B5F5ABC22411FFD700052B91 /* FetchData.swift */,
 				B5F5ABC02411FCFB00052B91 /* NewsView.swift */,
 				B5F5AB9D2411FB0F00052B91 /* SimpleNewsViewer */,
 				B5F5ABB42411FB1200052B91 /* SimpleNewsViewerTests */,
@@ -213,6 +216,7 @@
 			files = (
 				B5F5AB9F2411FB0F00052B91 /* AppDelegate.swift in Sources */,
 				B5F5ABC12411FCFB00052B91 /* NewsView.swift in Sources */,
+				B5F5ABC32411FFD700052B91 /* FetchData.swift in Sources */,
 				B5F5ABA12411FB0F00052B91 /* SceneDelegate.swift in Sources */,
 				B5F5ABA32411FB0F00052B91 /* ContentView.swift in Sources */,
 			);
